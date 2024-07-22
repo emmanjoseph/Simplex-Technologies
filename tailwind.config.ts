@@ -1,7 +1,7 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
-  darkMode: "class",
+  // darkMode:['class'],
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -11,19 +11,16 @@ const config: Config = {
     extend: {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))"
+        "gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))"
       },
       screens: {
-        xs: '400px',
-        '3xl': '1680px',
-        '4xl': '2200px',
+        xs: '400px', // Extra small screen
+        '3xl': '1680px', // Extra large screen
+        '4xl': '2200px', // Extra extra large screen
       },
-      
       animation: {
-        shimmer: "shimmer 2s linear infinite",
-        scroll:
-        "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
+        shimmer: "shimmer 2s linear infinite", // Shimmer effect animation
+        scroll: "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite", // Scroll animation
       },
       keyframes: {
         shimmer: {

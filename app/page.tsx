@@ -1,3 +1,4 @@
+import Footer from '@/components/Footer'
 import { Grid } from '@/components/Grid'
 import Hero from '@/components/Hero'
 import Intro from '@/components/Intro'
@@ -15,6 +16,7 @@ const page = () => {
       <Grid/>
       <Testimonials/>
       <Newsletter/>
+      <Footer/>
     </div>
   )
 }

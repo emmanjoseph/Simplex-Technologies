@@ -9,7 +9,11 @@ const Intro = () => {
     >
         <div className='flex flex-col md:flex-row justify-center '>
         <div className='w-full lg:w-1/2 flex items-center'>
-            <h1 className='bold-32 md:bold-64'>Get<br />The Best<br /> From Us </h1>
+            <motion.h1
+            initial={{opacity:0}}
+            whileInView={{opacity:1}}
+            transition={{delay:0.3,duration:0.8}}
+            className='bold-32 md:bold-88'>Get<br />The Best<br /> From Us </motion.h1>
             </div> 
 
             <div className='w-full lg:w-1/2 flex flex-col gap-3'>

@@ -1,15 +1,19 @@
+import Image from 'next/image'
 import React from 'react'
+import Img1 from '@/public/internet.jpg'
+import Img2 from '@/public/cctv.jpg'
+import Img3 from '@/public/electrical.jpg'
 
 const Hero = () => {
   return (
     <div
-    className='w-full max-container padding-container flex items-center justify-between py-20 lg:py-36 mt-10'>
+    className='w-full max-container padding-container flex items-center justify-between gap-16 py-20 lg:py-36 mt-6'>
       <div className='w-full md:w-1/2 flex flex-col gap-2'>
-      <h1 className='bold-40 md:bold-64'>Comprehensive <br /> IT Solutions </h1>
-      <p className='w-full regular-14 md:regular-16 mt-6 text-gray-300 xl:max-w-[600px]'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium error distinctio, sunt iure consequatur necessitatibus perspiciatis nam fugit optio saepe, cupiditate asperiores voluptatem laudantium facilis possimus quo.  </p>
+      <h1 className='bold-40 md:bold-88'>Comprehensive <br /> IT Solutions </h1>
+      <p className='w-full regular-14 md:regular-16 mt-6 xl:max-w-[600px]'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium error distinctio, sunt iure consequatur necessitatibus perspiciatis nam fugit optio saepe, cupiditate asperiores voluptatem laudantium facilis possimus quo.  </p>
 
       {/* statistics */}
-      <div className='mt-8'>
+      <div className='mt-10'>
         <div className='flex gap-6'>
           <div className='flex flex-col gap-2'>
             <h1 className='bold-18 md:bold-20'>Quality Services</h1>
@@ -33,8 +37,20 @@ const Hero = () => {
   </span>
 </button>
       </div>
-      <div className='hidden xl:flex'>
-     
+      <div className='hidden xl:flexCenter'>
+        <div className='grid grid-cols-3 gap-20'>
+          <div className='w-full col-span-3'>
+            <Image alt='img1' src={Img2}
+            className='w-full h-[300px] object-cover rounded-lg'
+            />
+          </div>
+          <div className='w-full'>
+            <Image alt='img2' src={Img1} className='w-full' />
+          </div>
+          <div>
+            <Image alt='im3' src={Img3} />
+          </div>
+        </div>
       </div>
 
     </div>
