@@ -27,7 +27,7 @@ const Intro = () => {
             />
           </div>
 
-          <p className='text-justify md:text-left regular-14 md:regular-16 xl:max-w-[650px] my-3 text-gray-300'>
+          <p className='text-justify md:text-left regular-14 md:regular-16 xl:max-w-[650px] my-3 '>
             We are committed to delivering exceptional IT services that cater to your unique business requirements. 
             Our team of professionals is dedicated to providing innovative solutions, ensuring your technology infrastructure 
             is robust, secure, and efficient. Experience unparalleled service quality and reliability with us.
