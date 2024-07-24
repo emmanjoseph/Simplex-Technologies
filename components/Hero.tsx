@@ -1,15 +1,19 @@
+'use client'
 import React from 'react';
 import Image from 'next/image';
 import Img1 from '@/public/cctv.jpg';
+import Img2 from '@/public/internet.jpg';
+import Img3 from '@/public/electrical.jpg';
+import { motion } from 'framer-motion';
 
 const Hero = () => {
   return (
-    <div className='w-full max-container padding-container flex items-center justify-between py-20 lg:py-36 mt-10'>
+    <div className='w-full max-container padding-container flex items-center justify-between py-20 lg:py-36 mt-5 gap-4'>
       <div className='w-full md:w-1/2 flex flex-col gap-2'>
         <h1 className='bold-40 md:bold-64'>Comprehensive <br /> IT Solutions </h1>
         <p className='w-full regular-14 md:regular-16 mt-6 text-gray-300 xl:max-w-[600px]'>
           We provide top-notch IT solutions tailored to meet your business needs. 
-          From infrastructure management to cybersecurity, our expert team ensures 
+          From infrastructure management to your security, our expert team ensures 
           your technology operates at its best, driving your success forward.
         </p>
 
@@ -34,8 +38,30 @@ const Hero = () => {
           </span>
         </button>
       </div>
-      <div className='w-1/2 hidden md:grid grid-cols-1'>
-        <Image src={Img1} alt='IT Solutions' className='rounded-lg'/>
+      <div className='w-1/2 hidden md:grid grid-cols-1 gap-6'>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+        >
+          <Image src={Img1} alt='IT Solutions' className='rounded-lg h-[300px] object-cover'/>
+        </motion.div>
+        <div className='grid grid-cols-2 gap-6'>
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.5 }}
+          >
+            <Image src={Img2} alt='IT Solutions' className='rounded-lg'/>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 1 }}
+          >
+            <Image src={Img3} alt='IT Solutions' className='rounded-lg'/>
+          </motion.div>
+        </div>
       </div>
     </div>
   );

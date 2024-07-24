@@ -1,14 +1,26 @@
-// components/ThemeProvider.tsx
-import { ThemeProvider as NextThemesProvider } from 'next-themes';
-import { ReactNode } from 'react';
+// @/components/ThemeProvider.tsx
+
+import { ThemeProvider as NextThemesProvider } from "next-themes";
 
 interface ThemeProviderProps {
-  children: ReactNode;
+  children: React.ReactNode;
+  defaultTheme: string;
+  enableSystem: boolean;
+  disableTransitionOnChange: boolean;
 }
 
-const ThemeProvider = ({ children }: ThemeProviderProps) => {
+const ThemeProvider: React.FC<ThemeProviderProps> = ({
+  children,
+  defaultTheme,
+  enableSystem,
+  disableTransitionOnChange,
+}) => {
   return (
-    <NextThemesProvider attribute="class">
+    <NextThemesProvider
+      defaultTheme={defaultTheme}
+      enableSystem={enableSystem}
+      disableTransitionOnChange={disableTransitionOnChange}
+    >
       {children}
     </NextThemesProvider>
   );
